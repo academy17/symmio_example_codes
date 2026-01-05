@@ -1,3 +1,16 @@
+"""Instant Trading (Solver) login helper.
+
+Instant trading allows the solver to open a position on behalf of the user. This is done by:
+
+- Delegation: the user delegates specific functions to a solver (typically via the
+    MultiAccount contract), so the solver can submit the on-chain transactions
+    without the user signing every trade.
+- Authentication/session: the user signs a short login message (SIWE-style,
+    EIP-4361 format) and the solver issues an access token. The frontend/bot then
+    uses that token when calling the solver's instant-action HTTP APIs.
+
+"""
+
 import os
 import requests
 import json

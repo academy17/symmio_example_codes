@@ -1,3 +1,20 @@
+"""Instant Trading (Solver) - instant close example.
+
+Instant trading allows the solver to open a position on behalf of the user. This is done by:
+
+
+- On-chain delegation (commonly via MultiAccount): the user grants the solver
+    permission to call certain protocol functions on their behalf.
+- Off-chain session/authentication: the user signs a SIWE login
+    message (with a server-provided nonce + expiration) and receives an access
+    token.
+
+With an access token, the bot/frontend calls the solver's HTTP endpoints (e.g.
+`/instant_close`). The solver uses delegated permissions to perform the fast
+price-lock and submit the closing transaction on-chain.
+
+"""
+
 import os
 import requests
 from eth_account import Account

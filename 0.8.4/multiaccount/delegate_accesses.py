@@ -60,6 +60,7 @@ def main():
         "0x7f2755b2",  # sendQuote
         "0x40f1310c",  # sendQuoteWithAffiliate
         "0x501e891f",  # requestToClosePosition
+        "0xa63b9363", # requestToCancelCloseRequest
     ]
     state = True
 

@@ -23,7 +23,7 @@ CONFIG = {
     
     # Trade settings
     "symbol_id": 4, #XRP
-    "party_b_whitelist": ["0x3B5aC601c7bB74999AB3135fa43cbDBc6aB74570"],
+    "party_b_whitelist": ["z"],
     "quantity": "6",
     "leverage": 1,
     "position_type": 0,  # 0=LONG, 1=SHORT

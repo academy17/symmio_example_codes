@@ -1,3 +1,23 @@
+"""Instant Trading (Solver) - instant open example.
+
+Instant trading allows the solver to open a position on behalf of the user. This is done by:
+
+
+High-level flow :
+- Delegation happens on-chain : the trader (partyA) authorizes a
+    solver to execute specific protocol functions on their behalf.
+- The trader authenticates to the solver (SIWE message + nonce) and
+    receives an access token.
+- The bot/frontend calls solver APIs (e.g., `instant_open`) using that token.
+    The solver can then price-lock quickly and submit the on-chain transaction
+    using its delegated permissions.
+
+This script is a practical example of an instant open:
+- logs in to the solver, fetches oracle price (Muon) and solver "locked params",
+    computes the normalized lock values, then calls the solver's `/instant_open`
+    endpoint.
+"""
+
 import os
 import requests
 import json
