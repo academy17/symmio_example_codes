@@ -1,3 +1,22 @@
+"""Instant Actions Demo (legacy): Login + Instant Open/Close loop
+
+What this script does
+- Logs in to a hedger/solver (SIWE) and then performs instant actions based on price checks.
+
+Run
+- python trading_bot_example/instant_actions_trading_bot.py
+
+Required .env
+- PRIVATE_KEY
+- SUB_ACCOUNT_ADDRESS
+- HEDGER_URL
+- MUON_BASE_URL
+- DIAMOND_ADDRESS
+
+Optional .env
+- CHAIN_ID (default: 42161)
+"""
+
 import os
 import time
 import requests
